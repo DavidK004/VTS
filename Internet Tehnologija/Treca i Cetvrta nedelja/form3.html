@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form3</title>
+</head>
+<body>
+    <form  id="form" name="form" method="post" action="obrada.php" >
+        <fieldset >
+            <legend>Feedback</legend>
+            <input type="text" name="name" id="name" placeholder="Name" size="30"><br>
+            User Status <br>
+            <input type="radio" name="status" id="participant" value="participant" checked>
+            <label for="participant">Course Participant</label><br>
+            <input type="radio" name="status" id="visiting" value="visiting">
+            <label for="visiting">Course Participant</label>
+            <br>
+            <br>
+            Give a grade to our webpage <br>
+            <input type="text" value="5" size="3"><br>
+            Your Dream Job <br>
+            <select name="jobs" id="jobs">
+                <option value="designer">Designer</option>
+                <option value="programmer">Programmer</option>
+                <option value="ceo">CEO</option>
+            </select> <br>
+            <button type="submit">Send</button>
+
+        </fieldset>
+    </form>
+</body>
+</html>

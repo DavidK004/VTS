@@ -1,0 +1,54 @@
+h1 {
+    font-family: Arial, "Times New Roman", sans-serif;
+    /*Generičke (opšte) porodice fontova:
+    Általános betűcsalád:
+    serif Times New Roman
+    sans-serif Arial, Helvetica
+    monospace Courier
+    cursive Zapf-Chancery, Caflisch Script
+    fantasy Western, Critter*/
+    font-style: italic; /*oblique*/
+    color: red;
+    /*
+    #ff ff ff
+    rgb(0,0,255)
+    rgb(0%,0%,100%)
+    rgba(red, green, blue, alpha)
+    rgba(0, 0, 255, 0.3)
+    alpha -> 0.0 (potpuno providno/teljesen átlátszó) - 1.0 (potpuno neprovidno/teljesen átlátszatlan)
+     */
+}
+ h2 {
+     font-weight: bold;
+     /*normal | bold | bolder | lighter | 100 | 200 | 300 |400 | 500 | 600 | 700 | 800 | 900*/
+    font-size: 15px;
+     /*absolute-size | relative-size | length | percentage
+     absolute-size (apsolutna veličina): xx-small | x-small | small | medium | large | x-large | xx-large |
+     relative-size (relativna veličina) larger | smaller
+     %,px,em=16px,ex=6pt,pt=1/72in,pc=12pt, cm,mm,in*/
+ }
+
+ p{
+     line-height: 15px;
+     /* normal | number | length | percentage
+p{ line-height: 1.2 }  number
+p{ line-height: 1.2em }  length
+p{ line-height: 150% } percentage */
+
+     word-spacing: 1em;
+     /*normal |length*/
+
+     letter-spacing: 0.1em;
+     /*normal |length*/
+ }
+
+ h3{
+     text-decoration: underline;
+     /*value: none | [ underline || overline || line-through || blink ]*/
+     text-align: justify;
+     /*value: left | right | center | justify*/
+     text-indent: 2em;
+    /*value: length | percentage*/
+     text-transform: uppercase;
+     /*value: capitalize | uppercase | lowercase | none*/
+ }
