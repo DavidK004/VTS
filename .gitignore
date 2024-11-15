@@ -1,8 +1,5 @@
 .vscode/
 *.exe
 *.o
-Arch/Project Backups
-Arch/*.workspace
-Mikrokontroleri/*
-!Mikrokontroleri/scripts/
-!Mikrokontroleri/*.mcp
+ARCH/Proteus_projects/Project Backups
+ARCH/Proteus_projects/*.workspace
