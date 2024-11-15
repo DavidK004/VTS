@@ -10,7 +10,7 @@ p, blockquote{
 h1, h2, h3{
     color: #540D0D;
 }
-a.nav{
+a:link{
     text-decoration: none;
     cursor: pointer;
     color: #440B0B;
@@ -32,6 +32,13 @@ a.name{
 }
 a:hover{
     color: #B31D1D;
+}
+a:active{
+    color: aqua;
+    text-decoration: underline;
+}
+a:visited{
+    color: gray;
 }
 .upper{
     text-transform: uppercase;
@@ -59,4 +66,9 @@ text-align: center;
 pre{
     background-color: #D37701;
     max-width: 26%;
+}
+.background{
+    background-image: url(https://preview.redd.it/axis-cult-symbol-explosion-in-this-wonderful-world-version-v0-vztb8rrfsh8b1.png?auto=webp&s=3296da8011d74a1239855f43001e02dada690036);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
