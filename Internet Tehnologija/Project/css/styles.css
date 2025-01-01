@@ -9,35 +9,37 @@ body{
     padding: 0 10px;
     margin: 0 auto;
   }
+
 header{
     background-color: #152232;
     border-radius: 5px;
+    
 }
+
 .header-inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px;  
 }
+
 .nav{
     display: flex;
     list-style: none;
     margin: auto;
-    color:#f4f4f9;
-    
+    color:#f4f4f9;  
 }
+
 .nav li{
     margin-right: 70px;
-    
 }
+
 a{
     text-decoration: none;
     color: inherit;
-
 }
 a:hover{
     color: #2b729d;
-    
 }
 
 
@@ -48,7 +50,7 @@ a:hover{
 }
 .image-container{
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 25%;
     height: 150px;
     width: 150px;
     margin: 10px;
@@ -87,9 +89,55 @@ a:hover{
     display: flex;
     margin-top: 20px;
 }
-.images .image-container{
-    border-radius: 25%;
+
+
+.school{
+    
+
+    color: #f4f4f9;
+    background-color: #152232;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 3%;
+    text-align: justify;
+    
 }
+.school p{
+    max-width: 70%;
+    margin-right: 42px;
+}
+.school-data{
+    display: flex;
+    align-items: center;
+}
+.school .image-container{
+    height: 250px;
+    width: 250px;
+}
+.site{
+    color: #f4f4f9;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+.sites{
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 90vh;
+    align-items: center;
+    
+}
+
+.site .image-container:hover{
+    box-sizing: border-box;
+    border: 2px solid #2b729d;
+}
+
 @media screen and (max-width: 768px) {
     .header-inner {
         flex-direction: column; 
@@ -124,6 +172,16 @@ a:hover{
     .images{
         flex-direction: column;
         align-items: center;
+    }
+    .school-data{
+        flex-direction: column;
+        
+    }
+    .school{
+        text-align: center;
+    }
+    .school p{
+        margin-right: 0;
     }
 }
 

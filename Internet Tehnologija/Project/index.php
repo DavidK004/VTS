@@ -21,8 +21,8 @@
             <ul class="nav">
                 <li><a class="current" href="index.php">Home</a></li>
                 <li><a href="about.php">About Me</a></li>
-                <li><a href="index.php">Education</a></li>
-                <li><a href="index.php">My Favorite sites</a></li>
+                <li><a href="education.php">Education</a></li>
+                <li><a href="favs.php">My Favorite sites</a></li>
                 <li><a href="index.php">Favorite Music</a></li>
                 <li><a href="index.php">Favorite Books</a></li>
                 <li><a href="index.php">Contact</a></li>
