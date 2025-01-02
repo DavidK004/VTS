@@ -21,11 +21,11 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a class="current" href="about.php">About Me</a></li>
                 <li><a href="education.php">Education</a></li>
-                <li><a href="favs.php">My Favorite sites</a></li>
-                <li><a href="index.php">Favorite Music</a></li>
-                <li><a href="index.php">Favorite Books</a></li>
-                <li><a href="index.php">Contact</a></li>
-                <li><a href="index.php">School Tasks</a></li>
+                <li><a href="favs.php">Favorite sites</a></li>
+                <li><a href="music.php">Favorite Music</a></li>
+                <li><a href="books.php">Favorite Books</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="tasks.php">School Tasks</a></li>
             </ul>
         </div>
         

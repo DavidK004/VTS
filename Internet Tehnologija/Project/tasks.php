@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="author" content="David Katrinka">
     <meta name="description" content="Web Presentation about me">
     <meta name="robots" content="index">
@@ -11,42 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/styles.css">
-    <title>Landing Page</title>
+    <title>Favorite Music</title>
 </head>
 <body>
-
-    <header>
+    
+<header>
         
         <div class="header-inner">
             <ul class="nav">
-                <li><a class="current" href="index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About Me</a></li>
                 <li><a href="education.php">Education</a></li>
                 <li><a href="favs.php">Favorite sites</a></li>
                 <li><a href="music.php">Favorite Music</a></li>
                 <li><a href="books.php">Favorite Books</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="tasks.php">School Tasks</a></li>
+                <li><a class="current" href="tasks.php">School Tasks</a></li>
             </ul>
         </div>
-        
-    </header>
-    <section class="welcome">
-        <div class="container">
-        <div class="welcome-inner">
-            <div class="welcome-text">
-            <h1>Hi, I am David Katrinka</h1>
-            <p>Welcome to my website, where you will find lots of information about me, like my favorite sites, music and books, my education and tasks i did in class.</p><br>
-            <?php echo "Current date and time: " . date("Y-m-d H:i:s"); ?> 
-            </div>
-            <div class="image-container">
-                <img src="images/pfp.jpg" alt="pfp">
-            </div>
-        </div>
-        </div>
-    </section>
-   <!-- Background from https://wweb.dev/resources/animated-css-background-generator -->
-    <div class="background">
+        </header>
+
+
+    <iframe class="tasks" src="school-tasks/indexT.html" frameborder="0" ></iframe>
+
+
+
+
+        <!-- Background from https://wweb.dev/resources/animated-css-background-generator -->
+        <div class="background">
    <span></span>
    <span></span>
    <span></span>
