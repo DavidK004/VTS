@@ -8,4 +8,9 @@
     if($connect -> connect_error) {
         echo $connect -> connect_error;
     }
+
+    $connectUser = new mysqli(HOST,'user1','pass',DATABASE);
+    if($connect -> connect_error) {
+        echo $connect -> connect_error;
+    }
 ?>

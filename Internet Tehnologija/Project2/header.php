@@ -17,5 +17,6 @@
         <div class="nav">
         <a class="products-link" href="index.php">Home</a>
         <a class="products-link" href="products.php">All Products</a>
+        <a class="products-link" href="order.php">Order</a>
         </div>
     </header>
