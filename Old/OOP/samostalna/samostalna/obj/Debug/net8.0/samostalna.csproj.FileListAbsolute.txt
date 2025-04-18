@@ -1,0 +1,14 @@
+/home/david004/RiderProjects/samostalna/samostalna/obj/Debug/net8.0/samostalna.GeneratedMSBuildEditorConfig.editorconfig
+/home/david004/RiderProjects/samostalna/samostalna/obj/Debug/net8.0/samostalna.AssemblyInfoInputs.cache
+/home/david004/RiderProjects/samostalna/samostalna/obj/Debug/net8.0/samostalna.AssemblyInfo.cs
+/home/david004/RiderProjects/samostalna/samostalna/obj/Debug/net8.0/samostalna.csproj.CoreCompileInputs.cache
+/home/david004/RiderProjects/samostalna/samostalna/bin/Debug/net8.0/samostalna
+/home/david004/RiderProjects/samostalna/samostalna/bin/Debug/net8.0/samostalna.deps.json
+/home/david004/RiderProjects/samostalna/samostalna/bin/Debug/net8.0/samostalna.runtimeconfig.json
+/home/david004/RiderProjects/samostalna/samostalna/bin/Debug/net8.0/samostalna.dll
+/home/david004/RiderProjects/samostalna/samostalna/bin/Debug/net8.0/samostalna.pdb
+/home/david004/RiderProjects/samostalna/samostalna/obj/Debug/net8.0/samostalna.dll
+/home/david004/RiderProjects/samostalna/samostalna/obj/Debug/net8.0/refint/samostalna.dll
+/home/david004/RiderProjects/samostalna/samostalna/obj/Debug/net8.0/samostalna.pdb
+/home/david004/RiderProjects/samostalna/samostalna/obj/Debug/net8.0/samostalna.genruntimeconfig.cache
+/home/david004/RiderProjects/samostalna/samostalna/obj/Debug/net8.0/ref/samostalna.dll

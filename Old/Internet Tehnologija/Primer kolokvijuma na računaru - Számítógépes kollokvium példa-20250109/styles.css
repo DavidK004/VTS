@@ -1,0 +1,114 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(bg.gif);
+    background-repeat: no-repeat;
+    background-position: left 350px center;
+}
+.container{
+    background-color: blue;
+    width: 600px;
+    margin: auto;
+    border: 5px solid #000;
+    border-style: dotted;
+}
+.banner{
+    
+    background-image: url(logo.jpg);
+    background-size: contain; 
+     
+    width: 100% ;
+    height: 200px;
+}  
+.title{
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+}
+.red{
+    color: #f00;
+}
+.subtitle{
+    color: #fff;
+    margin-top: 5px;
+}
+.divider{
+    background-color: #f00;
+    height: 20px;
+    margin: 0;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    
+}
+ul a{
+    text-decoration: none;
+    text-decoration: overline;
+    color: #fff;
+    font-weight: bold;
+}
+ul a:hover{
+    color: #f00;
+    background-color: #fff;
+}
+
+ul li{
+    margin-left: 10px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content{
+    display: flex;
+    
+}
+.registration{
+    background-color: gray;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    
+    padding: 5px;
+}
+.registration img{
+    
+    border: 5px solid #f00;
+}
+.registration input{
+    background-color: inherit;
+    border: none;
+    border-left: 5px solid #f00;
+    border-right: 5px solid #f00;
+    color: #f00;
+    font-weight: bold;
+}
+.registration span{
+    color: #f00;
+}
+.trainers{
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 5px;
+}
+.registration button{
+    color: #fff;
+    background-color: #00f;
+    border: 1px solid #fff;
+    padding: 5px;
+}
+.registration button:hover{
+    background-color: #000;
+    cursor: pointer;
+}
+.trainers p{
+    text-indent: 50px;
+    
+}
+.trainers img{
+    border: 5px solid #fff;
+}

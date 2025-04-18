@@ -1,0 +1,404 @@
+@import url('fonts.css');
+
+body {
+	padding-top: 63px;
+	font-family: "Roboto";
+	font-weight: 400;
+	color: #181a1f;
+}
+
+a {
+	text-decoration: none;
+	color: #181a1f;
+}
+
+.page-wrapper {
+	padding: 0;
+	width: 1180px;
+	margin: auto;
+}
+
+@media (max-width: 1179px){
+	.page-wrapper{
+		padding: 0 20px;
+        width: 100%;
+	}
+
+	body {
+		padding-top: 50px;
+	}
+}
+
+.block-title {
+    font-size: 40px;
+}
+
+.block {
+    padding: 50px 0;
+}
+
+.block-title--white {
+    color: #ffffff;
+    position: absolute;
+    z-index: 4;
+    top: 20px;
+    padding-left: 10px;
+    border-left: 2px solid #29abe2;
+}
+
+.main-cover {
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.main-cover-products {
+    background-image: url("../images/cover_1.jpg");
+}
+
+.main-cover-admin {
+    background-image: url("../images/cover_3.jpg");
+}
+
+.main-cover::after {
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2;
+    position: absolute;
+}
+
+
+
+/*---HEADER---*/
+.header {
+    border-bottom: 3px solid #29abe2;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    background-color: #181a1f;
+    height: 63px;
+    transition: all .4s ease;
+}
+
+.header .page-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 60px;
+    width: 200px;
+    transition: all .4s ease;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-wrapper nav .list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-wrapper nav .list li a {
+    margin: 0 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: color .4s ease;
+    color: #ffffff;
+}
+
+.nav-wrapper nav .list li a:hover {
+    color: #29abe2;
+}
+
+.nav-wrapper nav .list .last {
+    margin-right: 0;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+
+
+/*---INDEX---*/
+.hero {
+	height: 90vh;
+	width: 100%;
+	background-image: url('../images/hero1.jpg');
+	background-size: cover;
+	background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.hero-text {
+	font-size: 100px;
+	color: #ffffff;
+	position: absolute;
+    top: 35%;
+	transform: translateX(-372px);
+	left: 50%;
+    z-index: 4;
+    padding-left: 20px;
+    border-left: 6px solid #29abe2;
+}
+
+
+.product-list {
+    background-color: #f1efef;
+}
+
+.product-list__content {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.product-list__item {
+    width: 33.3%;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #909090;
+    margin-top: 42px;
+    background-color: #ffffff;
+}
+
+.product-list__picture {
+    height: 250px;
+    width: 250px;
+}
+
+.product-list__title {
+    font-size: 30px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.product-list__title::after {
+    position: absolute;
+    content: "";
+    top: -15px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #909090;
+}
+
+.product-list__subtitle {
+    font-size: 20px;
+}
+
+.product-list__price {
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+
+/*---FOOTER---*/
+.contact {
+    padding: 40px 0 75px 0;
+    background-color: #29abe2;
+}
+
+.contact__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.contact__content-left {
+    width: 33.3%;
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.contact__item img {
+    height: 20px;
+    width: 20px;
+}
+
+.contact__item span {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+.contact__content-middle {
+    width: 33.3%;;
+}
+
+.contact__item-about {
+    align-items: flex-start;
+}
+
+.contact__item-about img {
+    margin-top: 5px;
+}
+
+.contact__content-right {
+    width: 10%;
+}
+
+.contact__content-right h1 {
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.contact__content-right .nav .list {
+    padding: 0;
+}
+
+.contact__content-right .list li {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+
+.footer {
+	background-color: #181a1f;
+	padding: 50px 0;
+}
+
+.footer__content {
+	text-align: center;
+	color: #ffffff;
+}
+
+
+
+/*---PRODUCTS---*/
+.product-search {
+    text-align: center;
+}
+
+.product-search input {
+    padding: 10px;
+    border: 1px solid #909090;
+    border-radius: 5px;
+    width: 500px;
+    font-family: "Roboto";
+}
+
+.product-search button {
+    background-color: #29abe2;
+    padding: 9px 25px;
+    font-family: "Roboto";
+    font-weight: 300;
+    border-radius: 5px;
+    border: 1px solid #29abe2;
+    margin-left: -73px;
+    position: absolute;
+    font-size: 18px;  
+    cursor: pointer; 
+    transition: background-color .4s ease;
+}
+
+.product-search button:hover {
+    background-color: #0d94ce
+}
+
+.products-error {
+    font-family: "Roboto";
+}
+
+
+
+/*---ADMIN---*/
+.admin__table {
+    width: 100%;
+    font-size: 20px;
+}
+
+.admin__table .first {
+    border-bottom: 1px solid #181a1f;
+}
+
+.admin__table td {
+    padding: 10px 0;
+}
+
+.admin__table tr {
+    border-bottom: 1px solid #909090;
+}
+
+.admin__table-new {
+    margin-top: 40px;
+    background-color: #29abe2;
+    padding: 10px 25px;
+    font-family: "Roboto";
+    font-weight: 300;
+    border-radius: 5px;
+    border: 1px solid #29abe2;
+    font-size: 18px;
+    cursor: pointer;  
+    transition: background-color .4s ease;
+}
+
+.admin__table-new:hover {
+    background-color: #0d94ce
+}
+
+.admin__table-button {
+    background-color: #29abe2;
+    padding: 5px 15px;
+    font-family: "Roboto";
+    font-weight: 300;
+    border-radius: 5px;
+    border: 1px solid #29abe2;
+    font-size: 18px;
+    cursor: pointer; 
+    transition: background-color .4s ease;
+}
+
+.admin__table-button:hover {
+    background-color: #0d94ce
+}
+
+.update__item {
+    margin-top: 20px;
+}
+
+.update__item input {
+    padding: 10px;
+    border: 1px solid #909090;
+    border-radius: 5px;
+    width: 50%;
+    font-family: "Roboto";
+}   

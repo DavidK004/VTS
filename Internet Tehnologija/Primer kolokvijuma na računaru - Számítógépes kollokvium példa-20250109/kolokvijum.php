@@ -17,7 +17,7 @@
         </div>
         <hr class="divider">
         
-        <div class="nav">
+        <div class="nav">S
         <img src="head.gif" alt="">
             <ul>
                 <li><a href="">Home</a></li>

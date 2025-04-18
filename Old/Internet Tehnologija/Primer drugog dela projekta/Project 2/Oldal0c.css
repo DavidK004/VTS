@@ -1,0 +1,79 @@
+body {
+    background: url("PhotoB.png") fixed;
+    margin: 0.6cm;
+    padding: 10px;
+    border:5px solid rgba(171, 183, 183, 1);
+}
+#kfejlec{
+    font-size:45px;
+    text-align:center;
+    font-style: italic;
+    font-family: "Courier New","Times New Roman",sans-serif;
+    font-weight:bold;
+}
+#kfejlec2{
+    font-size: 35px;
+    text-align:center;
+    font-style: italic;
+    font-family: "Courier New","Times New Roman",sans-serif;
+    font-weight:bold;
+}
+#kfejlec3{
+    font-size: 30px;
+    text-align:center;
+    font-style: italic;
+    font-family: "Courier New","Times New Roman",sans-serif;
+    font-weight:bold;
+}
+.nav{
+    text-align: center;
+    background-color:rgba(171, 183, 183, 1);
+    border:2px solid #000000;
+    padding:20px;
+}
+.szemelyesadatok{
+    text-decoration: none;
+    color:#000000;
+    padding:50px;
+    font-weight:bold;
+    font-size: 30px;
+    font-family: "Courier New","Times New Roman",sans-serif;
+}
+.kedvenclinkek{
+    text-decoration: none;
+    color:#000000;
+    padding:50px;
+    font-weight:bold;
+    font-size: 30px;
+    font-family: "Courier New","Times New Roman",sans-serif;
+}
+.kedvencfilmek{
+    text-decoration: none;
+    color:#000000;
+    padding:50px;
+    font-weight:bold;
+    font-size: 30px;
+    font-family: "Courier New","Times New Roman",sans-serif;
+}
+div#kcontainer{
+    margin:1cm;
+    border:5px solid rgba(171, 183, 183, 1);
+    padding: 100px 50px;
+
+}
+div#ido {
+    font-family: Arial,"Times New Roman",sans-serif;
+    font-style: italic;
+    font-size: 35px;
+    text-align: center;
+    font-weight:bold;
+}
+.footer {
+    font-size:20px;
+    width: 100%;
+    background-color:rgba(171, 183, 183, 1); ;
+    color: #000000;
+    text-align: center;
+    font-weight:bold;
+}
+
