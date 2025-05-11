@@ -1,0 +1,291 @@
+
+            [11:32] Welcome to <b>Softing</b>!<br><br>For help on using BigBlueButton see these (short) <a href="http://www.bigbluebutton.org/html5" target="_blank"><u>tutorial videos</u></a>.<br><br>To join the audio bridge click the phone button.  Use a headset to avoid causing background noise for others.<br><br>This server is running <a href="http://docs.bigbluebutton.org/" target="_blank"><u>BigBlueButton</u></a>.
+[11:33] katrinka_david_26123035 : da
+[11:33] Hana Jakovetić : da
+[11:33] Štifelmajer_Daniel_26123006 : Da.
+[11:34] Štifelmajer_Daniel_26123006 : Dobar dan.
+[11:36] Crnkovic_Vedran_26123025 : Dobar dan.
+[11:37] Simon Janos : CREATE DATABASE University
+ GO
+ USE University
+ GO
+ CREATE TABLE Students
+ (
+    StudentID int identity primary key,
+    FirstName varchar(50),
+    LastName varchar(50),
+    Gender varchar(10),
+    Age int,
+    Address varchar(50)
+ )
+ GO
+ INSERT INTO Students (FirstName, LastName, Gender, Age, Address) VALUES 
+   ('Edward', 'Lyons', 'Male', 17, 'Spencer Street'),
+   ('Jimmie', 'Vargas', 'Male', 18, 'Blue Bay Avenue'),
+   ('Monica', 'Ward', 'Female', 16, 'Mapple Street'),
+   ('Joann', 'Jordan', 'Female', 17, 'Spencer Street'),
+   ('Cheryl', 'Swanson', 'Female', 17, 'Wacky Street'),
+   ('Clara', 'Webb', 'Female', 18, 'Spooner Street'),
+   ('Zack', 'Norris', 'Male', 19, 'Blue Bay Avenue'),
+   ('Randall', 'May', 'Male', 18, 'Golden Street'),
+  ('Jessica', 'Cole', 'Female', 17, 'Mapple Street'),
+  ('Oscar', 'Manning', 'Male', 18, 'Mapple Street') 
+ GO
+[11:38] katrinka_david_26123035 : da
+[11:38] Hana Jakovetić : da
+[11:39] Štifelmajer_Daniel_26123006 : Da.
+[11:45] Hana Jakovetić : jos ne
+[11:45] Simon Janos : buttonShow
+[11:46] Simon Janos : buttonAddNew
+[11:46] Simon Janos : buttonEdit
+[11:46] Simon Janos : buttonDelete
+[11:46] Simon Janos : textBoxStudentID
+[11:47] Simon Janos : textBoxFirstName
+[11:47] Simon Janos : textBoxLastName
+[11:47] Simon Janos : textBoxGender
+[11:47] Simon Janos : textBoxAge
+[11:48] Simon Janos : textBoxAddress
+[11:50] Turicin Stepan : Kako mi cemo raditi kolokvijumi i koji temovi? Sa Windows forms? Ili teorija?
+[11:50] Simon Janos : https://people.vts.su.ac.rs/~simon/Softing/Softing_SR.docx
+[11:51] Turicin Stepan : da li mozemo koristiti WPF umesto windows forms?
+[11:51] Turicin Stepan : hvala
+[11:52] Hana Jakovetić : da
+[11:53] Simon Janos : using System.Data.SqlClient;
+[11:54] Simon Janos : private SqlConnection connection;
+        private SqlCommand command;
+        private SqlDataReader reader;
+        private bool updateReady;
+        private bool insertReady;
+[11:55] Simon Janos : private SqlConnection connection;
+        private SqlCommand command;
+        private SqlDataReader reader;
+        private bool updateReady;
+        private bool insertReady;
+[11:55] Simon Janos : connection = new SqlConnection();
+            command = connection.CreateCommand();
+            connection.ConnectionString = @"Data Source=DESKTOP-V24V7QP;" + 
+                "Initial Catalog=University; Integrated Security=SSPI";
+
+            updateReady = false;
+            insertReady = false;
+[11:57] Hana Jakovetić : da
+[11:59] Simon Janos : command.CommandText = "SELECT * FROM Students WHERE StudentID=@StudentID";
+            command.Parameters.Clear();
+            command.Parameters.AddWithValue("@StudentID", textBoxStudentID.Text);
+
+            try
+            {
+                connection.Open();
+                reader = command.ExecuteReader(CommandBehavior.SingleRow);
+
+                if (reader.Read())
+                {
+                    textBoxFirstName.Text = reader["FirstName"].ToString();
+                    textBoxLastName.Text = reader["LastName"].ToString();
+                    textBoxGender.Text = reader["Gender"].ToString();
+                    textBoxAge.Text = reader["Age"].ToString();
+                    textBoxAddress.Text = reader["Address"].ToString();
+                }
+                else
+                    MessageBox.Show("StudentID does not exist.");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+[12:01] Hana Jakovetić : da
+[12:01] Štifelmajer_Daniel_26123006 : Da.
+[12:01] katrinka_david_26123035 : da
+[12:04] Simon Janos : if (!updateReady)
+            {
+                buttonEdit.Text = "Update";
+                textBoxStudentID.Enabled = false;
+                textBoxFirstName.Enabled = true;
+                textBoxLastName.Enabled = true;
+                textBoxGender.Enabled = true;
+                textBoxAge.Enabled = true;
+                textBoxAddress.Enabled = true;
+                buttonShow.Enabled = false;
+                buttonAddNew.Enabled = false;
+                buttonDelete.Enabled = false;
+                updateReady = true;
+            }
+            else
+            {
+                buttonEdit.Text = "Edit";
+
+                command.CommandText = "UPDATE Students SET FirstName=@FirstName, " +
+                    "LastName=@LastName, Gender=@Gender, Age=@Age, Address=@Address " +
+                    "WHERE StudentID=@StudentID";
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@FirstName", textBoxFirstName.Text);
+                command.Parameters.AddWithValue("@LastName", textBoxLastName.Text);
+                command.Parameters.AddWithValue("@Gender", textBoxGender.Text);
+                command.Parameters.AddWithValue("@Age", textBoxAge.Text);
+                command.Parameters.AddWithValue("@Address", textBoxAddress.Text);
+                command.Parameters.AddWithValue("@StudentID", textBoxStudentID.Text);
+
+                try
+                {
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+
+                    if (result > 0)
+                        MessageBox.Show("Student details successfully updated.");
+                    else
+                        MessageBox.Show("Update failed.");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+                textBoxStudentID.Enabled = true;
+                textBoxFirstName.Enabled = false;
+                textBoxLastName.Enabled = false;
+                textBoxGender.Enabled = false;
+                textBoxAge.Enabled = false;
+                textBoxAddress.Enabled = false;
+                buttonShow.Enabled = true;
+                buttonAddNew.Enabled = true;
+                buttonDelete.Enabled = true;
+                updateReady = false;
+            }
+[12:05] Štifelmajer_Daniel_26123006 : Uspeo.
+[12:05] Hana Jakovetić : da
+[12:05] katrinka_david_26123035 : da
+[12:05] Simon Janos : command.CommandText = "DELETE FROM Students WHERE StudentID=@StudentID";
+            command.Parameters.Clear();
+            command.Parameters.AddWithValue("@StudentID", textBoxStudentID.Text);
+
+            try
+            {
+                connection.Open();
+
+                int result = command.ExecuteNonQuery();
+
+                if (result > 0)
+                {
+                    MessageBox.Show("Student successfully deleted.");
+                    ClearFields();
+                }
+                else
+                    MessageBox.Show("Failed to delete student.");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+[12:06] Simon Janos : private void ClearFields()
+        {
+            textBoxFirstName.Text = String.Empty;
+            textBoxLastName.Text = String.Empty;
+            textBoxGender.Text = String.Empty;
+            textBoxAge.Text = String.Empty;
+            textBoxAddress.Text = String.Empty;
+        }
+[12:08] katrinka_david_26123035 : da
+[12:08] Hana Jakovetić : uspela
+[12:10] Simon Janos : if (!insertReady)
+            {
+                buttonAddNew.Text = "Enroll";
+                ClearFields();
+                textBoxStudentID.Text = GetNextStudentID().ToString();
+
+                textBoxStudentID.Enabled = false;
+                textBoxFirstName.Enabled = true;
+                textBoxLastName.Enabled = true;
+                textBoxGender.Enabled = true;
+                textBoxAge.Enabled = true;
+                textBoxAddress.Enabled = true;
+                buttonShow.Enabled = false;
+                buttonEdit.Enabled = false;
+                buttonDelete.Enabled = false;
+                insertReady = true;
+            }
+            else
+            {
+                buttonAddNew.Text = "Add New";
+
+                command.CommandText = "INSERT INTO Students " + 
+                    "(FirstName, LastName, Gender, Age, Address) VALUES " +
+                    "(@FirstName, @LastName, @Gender, @Age, @Address)";
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@FirstName", textBoxFirstName.Text);
+                command.Parameters.AddWithValue("@LastName", textBoxLastName.Text);
+                command.Parameters.AddWithValue("@Gender", textBoxGender.Text);
+                command.Parameters.AddWithValue("@Age", textBoxAge.Text);
+                command.Parameters.AddWithValue("@Address", textBoxAddress.Text);
+
+                try
+                {
+                    connection.Open();
+
+                    int result = command.ExecuteNonQuery();
+
+                    if (result > 0)
+                        MessageBox.Show("Student successfully enrolled.");
+                    else
+                        MessageBox.Show("Failed to enroll student.");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+                textBoxStudentID.Enabled = true;
+                textBoxFirstName.Enabled = false;
+                textBoxLastName.Enabled = false;
+                textBoxGender.Enabled = false;
+                textBoxAge.Enabled = false;
+                textBoxAddress.Enabled = false;
+                buttonShow.Enabled = true;
+                buttonEdit.Enabled = true;
+                buttonDelete.Enabled = true;
+                insertReady = false;
+            }
+[12:10] Simon Janos : private int GetNextStudentID()
+        {
+            command.CommandText = "SELECT IDENT_CURRENT('Students') + IDENT_INCR('Students')";
+
+            try
+            {
+                connection.Open();
+                int nextID = Convert.ToInt32(command.ExecuteScalar());
+                return nextID;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return 0;
+        }
+[12:13] Štifelmajer_Daniel_26123006 : Da, sve radi.
+[12:13] Hana Jakovetić : da
+[12:13] katrinka_david_26123035 : da
+[12:13] Kovačić_Bojan_26123038 : Profesore prekidate
+[12:14] katrinka_david_26123035 : da li mozete napisati
+[12:14] katrinka_david_26123035 : nismo culi
+[12:14] Hana Jakovetić : i to treba da vam se posalje kada se uradi ili ne?
+[12:15] Simon Janos : Potrebno je kreirati aplikaciju koja radi osnovne operacije sa Vašom projektnom bazom.
+[12:16] Simon Janos : Nije potrebno slati, svakako ćemo pregledati projekat kada bude u potpunosti zavšen
