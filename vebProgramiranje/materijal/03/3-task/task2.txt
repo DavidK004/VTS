@@ -1,0 +1,40 @@
+Zadatak 2
+
+Kreirati stranicu form.php koja sadrži formu sa poljima: study program, school, city, kao i dva dugmeta: submit i reset. Podaci se POST metodom šalju na stranicu insert.php, koja treba da proveri da li sva polja imaju vrednost i da je dužina unosa u svakom polju barem 5 karaktera. Ako se pojavi greška, korisnik se preusmerava nazad na form.php, uz prikaz odgovarajuće poruke.
+Ako su svi podaci ispravni, upisati ih u tabelu schools. Nakon uspešnog unosa, ispisati poruku da su podaci upisani u tabelu i prikazati dodeljeni ID (autoincrement vrednost). Prikazati i link za povratak na form.php.
+
+Obavezno koristiti PDO.
+Tabela schools ima sledeća polja: id_school, study_program, school, city, date_time_added.
+
+
+
+https://www.php.net/manual/en/function.strlen.php
+Note:
+strlen() returns the number of bytes rather than the number of characters in a string.
+
+https://www.php.net/manual/en/function.mb-strlen.php
+Returns the number of characters in string string having character encoding encoding. A multi-byte character is counted as 1. 
+
+----------------------------------------------------------------------------
+
+2. feladat
+
+Hozzon létre egy form.php nevű oldalt, amely egy űrlapot tartalmaz a következő mezőkkel: study program, school, city, valamint két gombbal: submit és reset.
+Az adatokat POST módszerrel kell elküldeni az insert.php oldalra, amelynek ellenőriznie kell, hogy minden mező ki van-e töltve, és hogy mindegyik mező értéke legalább 5 karakter hosszú-e.
+Hiba esetén a felhasználót vissza kell irányítani a form.php oldalra, és meg kell jeleníteni a megfelelő hibaüzenetet.
+
+Ha minden rendben van, az adatokat be kell írni a schools táblába.
+Sikeres adatbevitel után jelenjen meg egy üzenet, hogy az adatok bekerültek az adatbázisba, valamint a beszúrt rekord automatikusan generált ID-ja.
+Jelenjen meg egy link is, amely visszairányít a form.php oldalra.
+
+Használja kötelezően a PDO-t!
+A schools tábla mezői a következők: id_school, study_program, school, city, date_time_added.
+
+
+
+https://www.php.net/manual/en/function.strlen.php
+Note:
+strlen() returns the number of bytes rather than the number of characters in a string.
+
+https://www.php.net/manual/en/function.mb-strlen.php
+Returns the number of characters in string string having character encoding encoding. A multi-byte character is counted as 1. 

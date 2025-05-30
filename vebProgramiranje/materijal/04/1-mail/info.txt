@@ -1,0 +1,3 @@
+https://github.com/PHPMailer/PHPMailer
+https://mailtrap.io/
+

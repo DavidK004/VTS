@@ -1,0 +1,16 @@
+
+CREATE DATABASE IF NOT EXISTS wp
+    DEFAULT CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+
+USE wp;
+
+
+CREATE TABLE IF NOT EXISTS tour_guides (
+    id_guide INT AUTO_INCREMENT PRIMARY KEY,
+    guide_name VARCHAR(100) NOT NULL,
+    language VARCHAR(100) NOT NULL,
+    region VARCHAR(100) NOT NULL,
+    date_time_added DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

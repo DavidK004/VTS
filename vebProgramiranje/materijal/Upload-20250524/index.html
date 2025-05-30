@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    <style>
+        .bg1 {
+            background-color: #f00;
+        }
+
+        #if {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<form method="post" name="upload" action="upload.php" enctype="multipart/form-data">
+    <!--
+         <input type="hidden" name="MAX_FILE_SIZE" value="102400" >
+      File: <input type="file" name="file[]"  multiple><br><br>
+     -->
+    <label for="alias">Alias:</label>
+    <input type="text" name="alias" id="alias"> <br>
+    <label for="if">
+        <img src="upload.png" alt="upload" width="50" title="Choose an image">
+    </label>
+    <input type="file" name="file" id="if"><br><br>
+
+    <input type="submit" name="sb" id="sb" value="upload">
+    <input type="reset" name="rb" id="rb" value="cancel">
+
+</form>
+
+
+</body>
+</html>

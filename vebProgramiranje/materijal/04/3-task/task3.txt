@@ -1,0 +1,29 @@
+Zadatak 3
+
+Zadatak 3 proširiti slanjem e-maila pomoću klase PHPMailer.
+Nakon što se novi podaci uspešno unesu u bazu podataka, potrebno je automatski poslati e-mail na adresu webmaster@task3.com koristeći MailTrap kao SMTP servis za testiranje.
+
+Poruka treba da sadrži sledeći tekst:
+
+New data was inserted into the database:
+
+Study program: [vrednost]  
+School: [vrednost]  
+City: [vrednost]  
+Date and time: [vrednost]
+
+----------------------------------------------------------------------------
+
+3. feladat
+
+A 3. feladatot ki kell bővíteni e-mail küldéssel a PHPMailer osztály segítségével.
+Miután az új adatok sikeresen bekerültek az adatbázisba, automatikusan el kell küldeni egy e-mailt a webmaster@task3.com címre, a MailTrap SMTP tesztelési szolgáltatás használatával.
+
+Az üzenet tartalmazza a következő szöveget:
+
+New data was inserted into the database:
+
+Study program: [érték]  
+School: [érték]  
+City: [érték]  
+Date and time: [érték]
