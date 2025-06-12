@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 9</title>
+</head>
+<body>
+
+<script>
+    // Implicit conversion: "vts2" is not a number, so the result is NaN (Not a Number)
+    console.log('"vts2" * 1 =', "vts2" * 1); // NaN
+
+    // Variable n is a number
+    let n = 50;
+    console.log("n =", n);
+
+    // Concatenating a number and a string results in a string
+    let s = n + " programmers in company.";
+    console.log("s =", s); // "50 programmers in company."
+
+    // Different ways to convert a number to a string
+    let n_s = n + "";                 // Implicit conversion by concatenating an empty string
+    let string_value1 = String(n);    // Explicit conversion using the String function
+    let string_value2 = n.toString(); // Explicit conversion using the toString() method
+
+    console.log("n_s =", n_s);                       // "50"
+    console.log("string_value1 =", string_value1);   // "50"
+    console.log("string_value2 =", string_value2);   // "50"
+
+    // Converting a number to binary, octal, and hexadecimal string representations
+    let n2 = 255;
+
+    let binary_string = n2.toString(2);    // Base 2 (binary)
+    let octal_string = "0" + n2.toString(8);   // Base 8 (octal), with "0" prefix
+    let hex_string = "0x" + n2.toString(16);   // Base 16 (hex), with "0x" prefix
+
+    // Displaying results in the browser
+    document.write("Binary: " + binary_string + "<br>");
+    document.write("Octal: " + octal_string + "<br>");
+    document.write("Hexadecimal: " + hex_string);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+
+https://javascript.info/
+http://vanilla-js.com/
+
+http://www.ecma-international.org/
+
+ctrl+shift+i in FireFox -> WebConsole

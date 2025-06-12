@@ -1,6 +1,6 @@
 <?php
 
-class Shape
+class Shape4
 {
     public bool $hasSides = true;
     public string $producer;
@@ -17,7 +17,7 @@ class Shape
 
 }
 
-class Square extends Shape
+class Square4 extends Shape4
 {
     public string $name = "square";
     protected string $color;
@@ -25,7 +25,7 @@ class Square extends Shape
     public function __construct(string $color)
     {
         $this->color = $color;
-        parent::__construct(); // try to put in comment
+        // parent::__construct(); // try to put in comment
     }
 
     public function greet():string

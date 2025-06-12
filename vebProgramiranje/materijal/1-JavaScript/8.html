@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 8</title>
+</head>
+<body>
+<script>
+    let x;
+    console.log("x =", x);               // undefined
+    console.log("typeof x:", typeof x); // "undefined"
+
+    // Primitive value
+    let school = "VTS";
+    console.log("school =", school);               // "VTS"
+    console.log("typeof school:", typeof school);  // "string"
+
+    // String object
+    let school2 = new String("vts");
+    console.log("school2 =", school2);             // [String: 'vts']
+    console.log("typeof school2:", typeof school2); // "object"
+
+    // Comparison
+    console.log("school == school2:", school == school2);   // true (same values)
+    console.log("school === school2:", school === school2); // false (different types)
+
+</script>
+</body>
+</html>

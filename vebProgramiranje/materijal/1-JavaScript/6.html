@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 6</title>
+</head>
+
+<body>
+
+<script>
+
+    /*
+
+
+    JavaScript has three kinds of variable declarations.
+
+
+    var
+   Declares a variable, optionally initializing it to a value.
+
+
+    let
+    Declares a block-scoped, local variable, optionally initializing it to a value.
+
+
+    const
+    Declares a block-scoped, read-only named constant.
+
+
+
+    When to Use var, let, or const?
+
+    1. Always declare variables
+
+    2. Always use const if the value should not be changed
+
+    3. Always use const if the type should not be changed (Arrays and Objects)
+
+    4. Only use let if you can't use const
+
+    5. Only use var if you MUST support old browsers.
+
+
+
+     */
+
+    const MY_SCHOOL = 'Subotica Tech';
+    //MY_SCHOOL = 'VTS';
+
+    if (10 < 20) {
+        const language = 'JS!';
+        document.write(language + "<br>");
+    }
+
+    var language = 'JS2';
+
+    document.write(language);
+
+    //const CITY;
+
+    //CITY = 'Subotica';
+
+    const car = {type: "Ford", model: "Focus", color: "blue"};
+
+    car.color = "blue metallic";
+
+    car.year = 2019;
+
+    car.model = "Focus ST";
+
+    console.log(car);
+
+    //const car2 = {type:"Ford", model:"Mondeo", color:"blue"};
+
+    //car2 = {type:"Ford", model:"Focus New", color:"green"};
+
+</script>
+
+</body>
+
+</html>

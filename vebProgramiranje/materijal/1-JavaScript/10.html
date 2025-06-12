@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 10 - Bitwise Operators</title>
+</head>
+<body>
+
+<script>
+    /*
+    JavaScript stores numbers as 64-bit floating point values (IEEE 754),
+    but all bitwise operations are done on 32-bit signed integers.
+
+    Before a bitwise operation:
+    - The number is converted to a 32-bit signed integer.
+    After the operation:
+    - The result is converted back to a 64-bit JavaScript number.
+    */
+
+    // Bitwise AND
+    let a = 5 & 1;        // 0101 & 0001 => 0001 (1)
+    console.log("5 & 1 =", a);
+
+    // Bitwise OR
+    let b = 5 | 1;        // 0101 | 0001 => 0101 (5)
+    console.log("5 | 1 =", b);
+
+    // Bitwise NOT (inverts all bits)
+    let c = ~5;           // ~0101 => 1010 (in 32-bit signed: -6)
+    console.log("~5 =", c);
+
+    // Bitwise LEFT SHIFT (<<) - multiplies by 2
+    let d = 5 << 1;       // 0101 << 1 => 1010 (10)
+    console.log("5 << 1 =", d);
+
+    // Bitwise XOR
+    let e = 5 ^ 1;        // 0101 ^ 0001 => 0100 (4)
+    console.log("5 ^ 1 =", e);
+
+    // Bitwise RIGHT SHIFT (>>) - divides by 2 (keeps sign)
+    let f = 5 >> 1;       // 0101 >> 1 => 0010 (2)
+    console.log("5 >> 1 =", f);
+
+    // Bitwise UNSIGNED RIGHT SHIFT (>>>) - fills with zero from left
+    let g = 5 >>> 1;      // 0101 >>> 1 => 0010 (2)
+    console.log("5 >>> 1 =", g);
+
+    /*
+    Bitwise NOT examples:
+    ~0 => -1
+    ~-1 => 0
+    ~2147483647 => -2147483648
+    ~-2147483648 => 2147483647
+    */
+
+    // Helper functions using bit masking
+    function isOdd(int) {
+        return (int & 1) === 1;
+    }
+
+    function isEven(int) {
+        return (int & 1) === 0;
+    }
+
+    // Testing odd/even bitwise logic
+    console.log("isOdd(22):", isOdd(22));       // false
+    console.log("isOdd(-53):", isOdd(-53));     // true
+    console.log("isEven(-14):", isEven(-14));   // true
+    console.log("isEven(195):", isEven(195));   // false
+
+    // Source: https://www.w3schools.com/js/js_bitwise.asp
+</script>
+
+</body>
+</html>

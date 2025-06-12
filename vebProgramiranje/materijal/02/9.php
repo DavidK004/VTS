@@ -1,6 +1,6 @@
 <?php
 
-class Shape // final class Shape
+class ShapeFinal // final class Shape
 {
     public bool $hasSides = true;
     public string $producer;
@@ -17,7 +17,7 @@ class Shape // final class Shape
 
 }
 
-class Square extends Shape
+class SquareFinal extends ShapeFinal
 {
     public string $name = "something";
     protected string $color;
@@ -47,8 +47,8 @@ class Square extends Shape
 
 }
 
-$shape = new Shape();
-$square = new Square("blue");
+$shape = new ShapeFinal();
+$square = new SquareFinal("blue");
 echo $shape->getDetails();
 echo $square->getDetails();
 echo $square->getColor();

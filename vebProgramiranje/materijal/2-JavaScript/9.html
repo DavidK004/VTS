@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript 9</title>
+  </head>
+
+  <body>
+    <script>
+      let operators = {
+        add: function (x, y) {
+          return x + y;
+        },
+        subtract: function (x, y) {
+          return x - y;
+        },
+        multiply: function (x, y) {
+          return x * y;
+        },
+        divide: function (x, y) {
+          return x / y;
+        },
+        pow: Math.pow,
+        school: "vts",
+      };
+
+      function operate2(op_name, operand1, operand2) {
+        if (typeof operators[op_name] === "function")
+          return operators[op_name](operand1, operand2);
+        else document.write("unknown operator<br>");
+      }
+
+      let j = operate2("add", "hello", operate2("add", " ", "world<br>"));
+      let k = operate2("pow", 10, 2);
+
+      document.write(j);
+      document.write(k);
+    </script>
+  </body>
+</html>

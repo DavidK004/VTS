@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript 0</title>
+  </head>
+
+  <body>
+    <script>
+      let name = "Programmer";
+      console.log(`Hello, ${name}!`);
+
+      /*
+
+The backtick ( ` ) symbol is used in JavaScript to define template literals (also called template strings).
+
+1. Template literals allow embedding expressions inside a string using ${} and support multi-line strings. They were 
+introduced in ES6 (ECMAScript 2015).
+
+Instead of using single (' ') or double quotes (" "), you can use backticks ( ` ):
+
+let name = "Programmer";
+console.log(`Hello, ${name}!`);
+
+console.log("Hello, " + name + "!");
+
+2. With template literals, you don’t need \n for new lines:
+
+let message = `This is a multi-line 
+string using template literals.`;
+
+console.log(message);
+
+
+
+Without template literals, you'd have to do:
+
+let message = "This is a multi-line \n" +
+              "string using template literals.";
+
+
+3. You can insert variables and expressions inside ${}:
+
+let a = 5;
+let b = 10;
+console.log(`The sum of ${a} and ${b} is ${a + b}.`);
+
+4. You can even call functions inside ${}:
+
+function getGreeting(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(`Message: ${getGreeting("Bob")}`);
+
+5. Useful when inserting content into an HTML element dynamically:
+document.body.innerHTML = `<h1>Welcome, ${name}!</h1>`;
+
+*/
+    </script>
+  </body>
+</html>

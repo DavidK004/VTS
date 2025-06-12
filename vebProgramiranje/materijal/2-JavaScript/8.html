@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript 8</title>
+  </head>
+
+  <body>
+    <script>
+      let sum = function () {
+        console.log(arguments);
+        let sum = 0;
+        for (let i = 0, len = arguments.length; i < len; i++) {
+          let number = parseInt(arguments[i]);
+          console.log(number);
+
+          if (!isNaN(number)) {
+            sum += number;
+          }
+        }
+        return sum;
+      };
+
+      function print(msg) {
+        document.write(msg, "<br>");
+      }
+
+      print(sum(1, 2));
+      print(sum(1, 2, 3, 4, 5));
+      print(sum(1, 2, 3, 4, 5, 6));
+      print(sum(1, 2, 3, 4, 5, 6, "2VTS"));
+    </script>
+  </body>
+</html>

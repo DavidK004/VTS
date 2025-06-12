@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 2</title>
+</head>
+
+<body>
+
+<script>
+    let s = true;
+    let z = 1;
+    if (s) {
+        x = 5; // try with var and let
+    }
+    console.log(x);  // x is 5
+    console.log(window.x);
+    if (s) {
+        let y = 5;
+        console.log(z, y);
+    }
+    console.log(z);
+    //console.log(y);
+    //ReferenceError: y is not defined
+    console.log(window.z); // undefined
+
+
+    /*
+    window.x means "the variable x that is in the global scope and part of the window object."
+
+    If x is declared with var (or implicitly), window.x exists.
+
+    If x is declared with let or const, window.x is undefined
+    */
+</script>
+
+</body>
+
+</html>

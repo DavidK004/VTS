@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript 6</title>
+  </head>
+
+  <body>
+    <script>
+      let name = "My Name";
+      let email = "my@gmail.com";
+      let course = "Web programming";
+
+      let school = "VTS2";
+
+      function print(message) {
+        document.write(message);
+      }
+
+      function writeStudentData(name, email, course, school = getSchoolName()) {
+        print("name:" + name + "<br>");
+        print("email:" + email + "<br>");
+        print("course:" + course + "<br>");
+        print("school:" + school + "<br>");
+      }
+
+      writeStudentData(name, email, course);
+
+      writeStudentData(name, email, course, school);
+
+      function getSchoolName() {
+        return "VTS Subotica";
+      }
+    </script>
+  </body>
+</html>

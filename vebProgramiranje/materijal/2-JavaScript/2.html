@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript 2</title>
+  </head>
+
+  <body>
+    <script>
+      let first = function () {
+        console.log("first");
+      };
+
+      first();
+
+      let x = 1;
+      //console.log('x is '+message(x));
+      let message = function calculate(x) {
+        while (x < 20) {
+          x += 1;
+          calculate(x);
+        }
+        return x;
+      };
+
+      console.log("x is " + message(x));
+    </script>
+  </body>
+</html>

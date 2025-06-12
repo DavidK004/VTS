@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript 5</title>
+  </head>
+
+  <body>
+    <script>
+      //"use strict";
+      let name = "My Name";
+      let email = "my@gmail.com";
+      let course = "Web programming";
+
+      let school = "VTS2";
+
+      function writeOut(message) {
+        document.write(message);
+      }
+
+      function writeStudentData(name, email, course, school) {
+        writeOut("name:" + name + "<br>");
+        writeOut("email:" + email + "<br>");
+        writeOut("course:" + course + "<br>");
+        writeOut("school:" + school + "<br>");
+      }
+
+      writeStudentData(name, email, course);
+      writeStudentData(name, email, course, school);
+    </script>
+  </body>
+</html>

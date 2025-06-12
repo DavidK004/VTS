@@ -51,8 +51,9 @@ class Product2 extends Products
 
     public function __construct($name, $type)
     {
+        $this->type = "6kg";
         parent::__construct($name, $type);
-        $this->type = "2kg";
+        
     }
 
     public function getTypeName():string

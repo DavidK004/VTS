@@ -6,7 +6,7 @@
   https://phpthewrongway.com/
 */
 
-class Person
+class Person1
 {
     public bool $isAlive = true;
     public string $firstname;
@@ -14,8 +14,8 @@ class Person
     public int $age;
 }
 
-$teacher = new Person();
-$student = new Person();
+$teacher = new Person1();
+$student = new Person1();
 
 echo $teacher->isAlive;
 var_dump($teacher);
