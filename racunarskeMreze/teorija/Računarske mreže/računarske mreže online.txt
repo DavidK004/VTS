@@ -1,0 +1,75 @@
+Data mining - rudarenje, izvlačenje informacija iz ogromne količine podataka (sa AI-om).
+Tehnologije prenosa: Broadcasting i unicasting.
+Teritorijalnog prostiranja: LAN, MAN, WAN - internet sadrži od backbone-a, više LAN mreža čini jedan WAN.
+LAN - uređaji su povezani SWITCHEVIMA (ne ruterima).
+Metode prenosa: Baseband - žičani. Broadband - bežični.
+Ethernet je protokol.
+De facto standard.
+ISO/OSI arhitektura.
+Crtež je bitan.
+rfc (request for comment) document.
+SDU - Service Data Unit, PDU - Protocol Data Unit, PCI - informacija koja podržava protok informacije.
+U headeru PCI treba da piše npr. koristili smo Viber, whatsapp...
+Most Bridge 
+Switch Prekidač 
+Radi isto link layer, tj. drugi sloj (iznad fizičkog) rade sa tabelama sa MAC adresama.
+MAC tabela = Source Allocation Table (Switch ima sa portovima i mac adresama i sam to popunjava i podržava pomoću učenja unazad).
+Mora da promeni protokol paketa, zamenjuje zaglavlje 802.11 (A) sa 802.3 (B) zbog fizičkog sloja.
+STP - Spanning Tree Protocol. 
+switch šalju međusobno pakete i kada primete da je petlja, jedan prekida vezu i taj bridge se više ne koristi (virtuelno se prekida).
+Router donosi odluku na osnovu IP. Ima softver za usmeravanje.
+
+Fizički sloj:
+Shannon-ova formula:
+Maksimalna brzina podataka = H log2 (1 + S/N) b/s
+H - širina opsega kanala u Hz.
+S - snaga signala.
+N - snaga šuma Gauss raspodele.
+
+šema kodovanja V različitih nivoa.
+2H*log2*V
+
+zadatak:
+Kanal širine 1 MHz.
+Odnos signal-šum je 63 (SNR=63).
+Kolika je maksimalna brzina prenosa?
+Rešenje: 6 000 000 b/s (1 000 000 * log2 od 1+63 što je 6)
+Drugi zadatak:
+H = 2Mhz
+4 MB/s 
+Koliko je V?
+Rešenje: 4Mb/s=2MHzlog2V => 2=log2V => V=4
+Slajd 26,27,28,29, 46,47,48 ne.
+ISM - Industry, Science, Medical - frekvencija bez dozvole (obični smrtnici moraju tražiti dozvolu od države).
+FDM - Frequency Division Multiplexing - Frekvencijsko multipleksiranje.
+Na strani prijema se kanali razdvajaju pomoću filtara. 
+Spread spectrum. Svaki bitski interval je podeljen na M kratkih intervala (chips).
+Phase encode (Manchester) - prosek 0. LAN kabl. 1 - porast, 0 - opadajući impuls. 100110
+bežične mreže srednji domet: IEET sistem.
+*preskačemo prezentaciju 3 i idemo na prezentaciju četiri.
+Format ethernet okvira - 
+Ethernet DIX.
+Preamble - sinhronizacioni bitovi.
+Destination Address MAC adresa 6 bitova.
+Source Adress 6 bita.
+Type 2 bita. - kod iznad etherneta tj. neko izvan layer-a.
+Data - 46-1500
+FCS - 4 bita
+IEEE 802.3 Ethernet
+Razlika je DIX ima Type 802.3 ima Length i on ima 802.2 Header.
+
+slajd 36
+ARP protokol (Address Resolution Protocol) - pita svakoga koje poslao zahtev za paket/ ko je na adresi X i onda se neko javi.
+slajd 30 preskačemo, idemo na 35.
+10GB Ethernet optičko vlakno, razlikuju se kodovi.
+4 adresna polja zbog baznih stanica (access point).
+Duration, Sequence.
+Bežični LAN 64. stranica.
+Hop count - preko koliko rutera prelazi da dođe do cilja.
+DVR - dinamički algoritam rutiranja.
+LSR - 
+Ovo su algoritmi/metode za rutiranje.
+
+PROGRAMIRANJE MOBILNIH UREĐAJA JEBENI GRADLE FIX: Naći gradle-wrapper.properties (project naći gradle folder) i promeniti kod 
+distributionUrl=hhtps.....gradle-verzija-all.zip (umesto -bin.zip).
+3 boda imam iz računarskih mreža predavanja.

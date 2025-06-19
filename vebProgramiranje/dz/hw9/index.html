@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Homework</title>
+</head>
+<body>
+    <script>
+        let number = 5;
+        let name = "David";
+        let grade = 9.5;
+        const grades = [9.5, 8.0, 10.0];
+        let school = {
+            name: "VTS",
+            location: "Subotica",
+            established: 1960
+        };
+
+        function writeObject(obj) {
+           JSON.stringify(obj, null, 2).split('\n').forEach(line => {
+                console.log(line);
+            });
+        }
+
+       
+
+        document.write(typeof number + "<br>");
+        document.write(typeof name + "<br>");
+        document.write(typeof grade + "<br>");
+        document.write(typeof grades + "<br>");
+        document.write(typeof school + "<br>");
+        document.write(typeof writeObject + "<br>"); 
+
+        console.log("Number:", number);
+        console.log("Name:", name);
+        console.log("Grade:", grade);
+        console.log("Grades:", grades);
+        console.log("School:", school);
+        console.log("Function:", writeObject);
+
+        if(number % 5 === 0){
+            if(!isNaN(number)){
+                objectOne ={
+                    name: "Object One",
+                    age: 10,
+                    city: "New York",
+                    job: "Developer",
+                    email: "example@example.com",
+                    phone: "123-456-7890"
+                }
+                writeObject(objectOne);
+            }
+        } else{
+            objectTwo = {
+                name: "Object Two",
+                year: 2022,
+                city: "Los Angeles",
+                university: "Oxford",
+                email: "example2@example.com"
+            }
+
+            document.write("Your email address is: " + objectTwo.email + "<br>");
+        }
+        
+        
+    </script>
+    <script src="functions.js"></script>
+</body>
+</html>
