@@ -1,0 +1,44 @@
+FIREFOX:
+https://addons.mozilla.org/en-US/firefox/addon/user-agent-string-switcher/
+
+CHROME:
+https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg
+
+EDGE:
+https://microsoftedge.microsoft.com/addons/detail/useragent-switcher-and-m/cnjkedgepfdpdbnepgmajmmjdjkjnifa
+
+1. Install addon
+2. Activate addon if it is not activated
+3. Choose mobile device
+4. Test it with:
+
+www.subotica.com
+www.reddit.com
+www.facebook.com
+www.gradsubotica.co.rs
+www.google.com
+www.gmail.com
+
+Mozilla/5.0 (Linux; Android 13; SM-A037U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36  uacq
+
+Mozilla/5.0 (iPad; CPU OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/98.0.4758.85 Mobile/15E148 Safari/604.1
+
+Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36  uacq
+
+
+
+cmd ipconfig
+
+http://192.168.26.136/iws_2025/01/
+
+
+
+http://ip-api.com/json
+
+http://ip-api.com/json/103.14.26.0
+
+
+http://192.168.26.136/iws_2025/01/test/
+
+http://192.168.26.70/iws_2025/01/
+

@@ -1,0 +1,34 @@
+Useful links:
+https://getcomposer.org/
+https://github.com/PHPMailer/PHPMailer
+https://packagist.org/
+https://github.com/serbanghita/Mobile-Detect
+------------------------------------------------------------
+Installing Composer on Windows
+This is the easiest way to set up Composer on your machine:
+1. Download and run Composer-Setup.exe from https://getcomposer.org/
+It will install the latest Composer version and automatically configure your system PATH,
+so you can use the "composer" command from any directory in your terminal.
+2. Restart your terminal after installation.
+This is important because the PATH environment variable is only loaded when the terminal starts.
+------------------------------------------------------------
+Manually adding Composer to PATH (Windows 10)
+If Composer is not recognized in your terminal:
+1. Right-click the Start button → System
+2. Open Advanced system settings
+3. Click Environment Variables
+4. In System variables, find and select Path, then click Edit
+5. Click New and add this path:
+C:\ProgramData\ComposerSetup\bin
+6. Open a new Command Prompt (cmd) and test:
+composer --version
+------------------------------------------------------------
+Updating Composer to the latest version
+composer --version
+composer self-update
+composer --version
+------------------------------------------------------------
+Summary:
+After installation and PATH setup, you can run Composer globally from the command line to install
+packages
+such as PHPMailer or Mobile Detect directly from Packagist.
