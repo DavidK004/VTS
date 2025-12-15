@@ -1,0 +1,9 @@
+NC (No Case): This flag tells Apache to perform a case-insensitive match during pattern matching.
+For example, if you have the NC flag in your rewrite rule and you're matching against "example",
+it will match "Example" or "EXAMPLE" as well.
+
+L (Last): This flag indicates that if the rule matches, no further rules should be processed.
+It tells Apache to stop processing rewrite rules for the current request after this rule is applied.
+
+In a combination like [NC,L], it means that the rewrite rule should be case-insensitive, and if this rule matches,
+ it should be the last rule processed for the current request.

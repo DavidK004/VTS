@@ -1,0 +1,23 @@
+GET 
+
+http://localhost/iws_2025/06/API/2_example/products/1
+http://localhost/iws_2025/06/API/2_example/products
+
+POST 
+http://localhost/iws_2025/06/API/2_example/products
+Body - raw - JSON
+{ "name" : "vts"}
+
+DELETE
+http://localhost/iws_2025/06/API/2_example/products/19
+
+PATCH
+http://localhost/iws_2025/06/API/2_example/products/18
+Body - raw - JSON
+{ "name" : "vts2", "size": 1 }
+
+PUT
+Method Not Allowed
+
+INFO: https://www.php.net/manual/en/wrappers.php.php
+

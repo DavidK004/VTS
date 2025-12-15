@@ -13,7 +13,7 @@ function writeData($a, $b, $c = 'choose')
 $a = $b = $c = "vts";
 
 writeDataTwo($a, $b, $c);
-writeDataTwo($a, $b);
+writeData($a, $b);
 
 function writeDataTwo($a, $b, $c)
 {

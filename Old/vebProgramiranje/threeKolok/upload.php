@@ -45,7 +45,6 @@ function upload_file(array $file, string $subfolder_name, string $file_type)
 
 
 
-<?php
 // Define the base path (adjust as needed)
 define('BASE_PATH', __DIR__); // or some other base path
 
