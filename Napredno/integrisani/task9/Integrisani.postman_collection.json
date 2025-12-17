@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "22eb8e59-621b-428a-b3ac-2016df85d92e",
+		"name": "Integrisani",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46435318"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "GET products by category",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://sites.local/integrisani/task9/api/categories/2/products",
+							"protocol": "http",
+							"host": [
+								"sites",
+								"local"
+							],
+							"path": [
+								"integrisani",
+								"task9",
+								"api",
+								"categories",
+								"2",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.28.0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Dec 2025 09:36:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.15"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id_product\": 3,\n        \"name\": \"Novel\",\n        \"price\": \"19.99\",\n        \"amount\": 50,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 4,\n        \"name\": \"Comic\",\n        \"price\": \"9.99\",\n        \"amount\": 100,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    }\n]"
+				},
+				{
+					"name": "GET all categories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://sites.local/integrisani/task9/api/categories/",
+							"protocol": "http",
+							"host": [
+								"sites",
+								"local"
+							],
+							"path": [
+								"integrisani",
+								"task9",
+								"api",
+								"categories",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.28.0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Dec 2025 09:40:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.15"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id_category\": 1,\n        \"name\": \"Electronics\",\n        \"date_added\": \"2025-12-17 08:41:07\"\n    },\n    {\n        \"id_category\": 2,\n        \"name\": \"Books\",\n        \"date_added\": \"2025-12-17 08:41:07\"\n    },\n    {\n        \"id_category\": 3,\n        \"name\": \"Clothing\",\n        \"date_added\": \"2025-12-17 08:41:07\"\n    },\n    {\n        \"id_category\": 4,\n        \"name\": \"Toys\",\n        \"date_added\": \"2025-12-17 08:41:07\"\n    },\n    {\n        \"id_category\": 5,\n        \"name\": \"Groceries\",\n        \"date_added\": \"2025-12-17 08:41:07\"\n    }\n]"
+				},
+				{
+					"name": "GET all products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://sites.local/integrisani/task9/api/products/",
+							"protocol": "http",
+							"host": [
+								"sites",
+								"local"
+							],
+							"path": [
+								"integrisani",
+								"task9",
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.28.0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Dec 2025 09:41:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.15"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id_product\": 1,\n        \"category\": \"Electronics\",\n        \"name\": \"Smartphone\",\n        \"price\": \"699.99\",\n        \"amount\": 10,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 2,\n        \"category\": \"Electronics\",\n        \"name\": \"Laptop\",\n        \"price\": \"1200.00\",\n        \"amount\": 5,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 3,\n        \"category\": \"Books\",\n        \"name\": \"Novel\",\n        \"price\": \"19.99\",\n        \"amount\": 50,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 4,\n        \"category\": \"Books\",\n        \"name\": \"Comic\",\n        \"price\": \"9.99\",\n        \"amount\": 100,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 5,\n        \"category\": \"Clothing\",\n        \"name\": \"T-Shirt\",\n        \"price\": \"14.99\",\n        \"amount\": 30,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 6,\n        \"category\": \"Clothing\",\n        \"name\": \"Jeans\",\n        \"price\": \"49.99\",\n        \"amount\": 20,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 7,\n        \"category\": \"Toys\",\n        \"name\": \"Action Figure\",\n        \"price\": \"24.99\",\n        \"amount\": 15,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 8,\n        \"category\": \"Toys\",\n        \"name\": \"Puzzle\",\n        \"price\": \"12.99\",\n        \"amount\": 25,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 9,\n        \"category\": \"Groceries\",\n        \"name\": \"Apple\",\n        \"price\": \"0.99\",\n        \"amount\": 200,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 10,\n        \"category\": \"Groceries\",\n        \"name\": \"Milk\",\n        \"price\": \"1.49\",\n        \"amount\": 100,\n        \"date_added\": \"2025-12-17 08:41:23\"\n    },\n    {\n        \"id_product\": 11,\n        \"category\": \"Electronics\",\n        \"name\": \"New Product\",\n        \"price\": \"12.99\",\n        \"amount\": 5,\n        \"date_added\": \"2025-12-17 10:39:32\"\n    }\n]"
+				},
+				{
+					"name": "GET product by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://sites.local/integrisani/task9/api/products/3",
+							"protocol": "http",
+							"host": [
+								"sites",
+								"local"
+							],
+							"path": [
+								"integrisani",
+								"task9",
+								"api",
+								"products",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.28.0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Dec 2025 09:41:22 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.15"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id_product\": 3,\n    \"category\": \"Books\",\n    \"name\": \"Novel\",\n    \"price\": \"19.99\",\n    \"amount\": 50,\n    \"date_added\": \"2025-12-17 08:41:23\"\n}"
+				},
+				{
+					"name": "DELETE product by id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://sites.local/integrisani/task9/api/products/11",
+							"protocol": "http",
+							"host": [
+								"sites",
+								"local"
+							],
+							"path": [
+								"integrisani",
+								"task9",
+								"api",
+								"products",
+								"11"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.28.0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Dec 2025 09:42:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.15"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Deleted product 11\"\n}"
+				},
+				{
+					"name": "POST create new product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id_category\": 1,\n  \"name\": \"New Product\",\n  \"price\": 12.99,\n  \"amount\": 5,\n  \"date_added\": \"2025-12-17 09:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://sites.local/integrisani/task9/api/products/",
+							"protocol": "http",
+							"host": [
+								"sites",
+								"local"
+							],
+							"path": [
+								"integrisani",
+								"task9",
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.28.0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Dec 2025 09:44:11 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.4.15"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Product created\",\n    \"id\": 12\n}"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,35 @@
+server {
+    listen 80;
+    server_name sites.local;
+
+    root /home/david/sites/sites.local;
+    index index.php index.html index.htm;
+
+    error_log /home/david/sites/sites.error.log;
+
+    client_max_body_size 10M;
+
+    location /integrisani/task9/api {
+    try_files $uri /integrisani/task9/index.php?$query_string;
+}
+    location / {
+        autoindex on;
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location /checkvars {
+    return 200 "DOCUMENT_ROOT: $document_root\nSCRIPT_NAME: $fastcgi_script_name\n";
+}
+
+
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param HTTP_AUTHORIZATION $http_authorization;
+        fastcgi_pass unix:/run/php-fpm/php-fpm.sock;
+    }
+
+    location ~ /\. {
+        deny all;
+    }
+}
