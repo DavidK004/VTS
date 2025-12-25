@@ -1,0 +1,152 @@
+Treba koristiti:
+
+- Composer PSR-4 autoload
+- Namespaces
+- PDO (kroz postojeću Db klasu)
+- dotenv za konfiguraciju
+- Faker za generisanje test podataka
+- Bazu podataka
+- index.php fajl
+- Biblioteke:
+	vlucas/phpdotenv
+	fakerphp/faker
+
+
+------------------------------------
+
+Struktura projekta
+
+project-root/
+├── src/
+│   ├── MyApp/
+│   │   ├── Model/
+│   │   │   └── Product.php
+│   │   ├── Repository/
+│   │   │   └── ProductRepository.php
+│   │   └── Seeder/
+│   │       └── ProductSeeder.php
+│   └── Database/
+│       └── Db.php
+├── public/
+│   └── index.php
+├── .env
+├── composer.json
+└── vendor/
+
+--------------------------------------
+
+Klasa Database\Db je već implementirana i mora se koristiti za konekciju sa bazom.
+
+--------------------------------------
+composer.json
+
+{
+  "require": {
+    "vlucas/phpdotenv": "^5.6",
+    "fakerphp/faker": "^1.24"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyApp\\": "src/MyApp/",
+      "Database\\": "src/Database/"
+    }
+  }
+}
+
+
+Nakon dodavanja klasa, obavezno pokrenuti:
+composer dump-autoload
+
+
+----------------------------------------
+
+U root direktorijumu projekta kreirati .env fajl:
+
+DB_HOST=localhost
+DB_NAME=task_products
+DB_USER=root
+DB_PASSWORD=
+
+----------------------------------------
+
+Tabela: products
+
+id_product INT PK AUTO_INCREMENT
+
+name VARCHAR(120) NOT NULL
+
+category VARCHAR(60) NOT NULL
+
+price DECIMAL(10,2) NOT NULL
+
+amount INT NOT NULL
+
+created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+
+Indeksi (obavezni):
+
+INDEX na category
+
+INDEX na price
+
+----------------------------------------
+
+PHP klase (namespaces)
+A) MyApp\Model\Product
+
+Predstavlja jedan proizvod (model).
+
+Sadrži:
+
+svojstva: name, category, price, amount
+
+konstruktor
+
+
+B) MyApp\Repository\ProductRepository
+
+Radi sa bazom podataka koristeći Database\Db::getInstance().
+
+Mora implementirati sledeće metode:
+
+insertMany(array $products): int
+
+searchByName(string $query): array
+
+deleteById(int $id): bool
+
+
+
+C) MyApp\Seeder\ProductSeeder
+
+Koristi Faker za generisanje proizvoda.
+
+Obavezno:
+
+metoda generate(int $count): array
+
+realistični podaci:
+
+naziv proizvoda
+
+kategorija (npr. Electronics, Books, Home, Sports)
+
+cena u razumnom opsegu
+
+količina (0–250)
+
+-----------------------------------------
+
+index.php mora:
+
+- uključiti vendor/autoload.php
+
+- omogućiti:
+
+	- generisanje proizvoda (npr. 10, 50, 100)
+
+	- prikaz proizvoda
+
+	- pretragu po nazivu
+
+	- brisanje proizvoda
