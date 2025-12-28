@@ -4,7 +4,7 @@ date_default_timezone_set('Europe/Belgrade');
 const PARAMS = [
     "HOST" => 'localhost',
     "USER" => 'root',
-    "PASSWORD" => 'root',
+    "PASSWORD" => 'axis',
     "DB" => 'gallery',
     "CHARSET" => 'utf8mb4'
 ];

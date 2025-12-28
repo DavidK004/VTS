@@ -1,0 +1,6 @@
+
+    array(3) { [0]=> array(7) { ["username"]=> string(9) "userborat" ["password"]=> string(19) "1766676565userborat" ["hashed_password"]=> string(60) "$2y$12$Jje2mzJ/B4JqfjgH47QJ0uJ/FJWjTRq98R72Qfdq6mdXGEo4Lhmkm" ["age"]=> int(31) ["name"]=> string(5) "Borat" ["email"]=> string(19) "userborat@photo.com" ["level"]=> string(8) "reporter" } 
+    
+    [1]=> array(7) { ["username"]=> string(11) "userborat22" ["password"]=> string(21) "1766676565userborat22" ["hashed_password"]=> string(60) "$2y$12$4lrsm/vs9IimY5c8366jE.pvBwdOQaFYHURFE.2yVOF4TmsnJyFLW" ["age"]=> int(40) ["name"]=> string(5) "Borat" ["email"]=> string(21) "userborat22@photo.com" ["level"]=> string(5) "admin" } 
+    
+    [2]=> array(7) { ["username"]=> string(8) "useraxel" ["password"]=> string(18) "1766676565useraxel" ["hashed_password"]=> string(60) "$2y$12$WhAVfV/9vmkxkaIE19sQO.VhfH6BEHgFoQRNnUuIhKdsBbwdV7OVy" ["age"]=> int(43) ["name"]=> string(4) "Axel" ["email"]=> string(18) "useraxel@photo.com" ["level"]=> string(5) "guest" } }

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 require_once 'config.php';
 
 $GLOBALS['pdo'] = connectDatabase($dsn, $pdoOptions);
@@ -47,7 +48,62 @@ function getCategories(string $cat): array
     return array_values($cat_temp);
 }
 
-function createUsers(array $names, array $level): array
+function createUsers(array $names, array $levels): array
 {
+    $cleanNames = array_map(function (string $name): string {
+        $result = '';
 
+        for ($i = 0; $i < strlen($name); $i++) {
+            if (ctype_alpha($name[$i])) {
+                $result .= $name[$i];
+            }
+        }
+
+        return ucfirst(strtolower($result));
+    }, $names);
+
+    $users = [];
+    $usedUsernames = [];
+    $usedLevels = [];
+
+    for ($i = 0; $i < 3; $i++) {
+
+
+        $name = $cleanNames[array_rand($cleanNames)];
+
+        $username = 'user' . strtolower($name);
+
+        if (in_array($username, $usedUsernames)) {
+            $username .= rand(10, 200);
+        }
+        $usedUsernames[] = $username;
+
+
+        $password = time() . $username;
+        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+
+        $email = $username . '@photo.com';
+
+
+        $age = rand(18, 47);
+
+
+        do {
+            $level = $levels[array_rand($levels)];
+        } while (in_array($level, $usedLevels));
+        $usedLevels[] = $level;
+
+        $users[] = [
+            'username' => $username,
+            'password' => $password,
+            'hashed_password' => $hashedPassword,
+            'age' => $age,
+            'name' => $name,
+            'email' => $email,
+            'level' => $level
+        ];
+    }
+
+    return $users;
 }
